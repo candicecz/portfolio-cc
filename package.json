@@ -1,7 +1,7 @@
 {
-  "name": "portfolio-cc",
+  "name": "cc-portfolio",
   "version": "1.0.0",
-  "description": "Describe portfolio-cc here",
+  "description": "Describe cc-portfolio here",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
@@ -12,11 +12,23 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "lottie-web": "^5.6.6",
+    "ramda": "^0.26.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-responsive": "^8.0.1",
+    "react-spring": "^8.0.27",
+    "resize-observer-polyfill": "^1.5.1",
+    "styled-normalize": "^8.0.6",
+    "styled-system": "^5.1.2"
   },
   "devDependencies": {
-    "nwb": "0.23.x"
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "nwb": "0.23.x",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^4.4.0"
   },
   "author": "",
   "license": "MIT",

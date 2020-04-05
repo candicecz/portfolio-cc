@@ -1,0 +1,15 @@
+{
+  "short_name": "Portfolio",
+  "name": "Portfolio",
+  "icons": [
+    {
+      "src": "assets/images/cc-icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#FFF",
+  "theme_color": "#371C7D",
+  "display": "standalone"
+}
