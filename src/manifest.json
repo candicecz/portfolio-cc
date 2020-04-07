@@ -3,7 +3,7 @@
   "name": "Portfolio",
   "icons": [
     {
-      "src": "assets/images/cc-icon_512x512.png",
+      "src": "assets/cc-icon_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

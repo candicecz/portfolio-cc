@@ -9,6 +9,25 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     overflow-x: hidden;
     min-width: 17.5rem;
+    min-height: 100vh;
+   
+  }
+  
+  html, body {
+    width: 100%;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    flex: 1;
+  } 
+
+  #root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   * { 
@@ -43,7 +62,7 @@ export const theme = {
     "0.25rem",
     "0.5rem",
     "0.75rem",
-    "1rem",
+    "1rem", // = 16px
     "1.25rem",
     "1.5rem",
     "2rem",
@@ -135,9 +154,8 @@ export const theme = {
     },
   },
   shadows: {
-    sm: `0px 1px 7px 0px rgba(0,0,0,0.12)`,
-    md: `0px 10px 60px -10px rgba(0, 0, 0, 0.2)`,
-    lg: `0px 20px 60px -10px rgba(0, 0, 0, 0.4)`,
+    sm: "0px 1px 7px 0px rgba(0,0,0,0.12)",
+    md: "0px 1px 7px 2px rgba(0,0,0,0.24)",
   },
   transitions: {
     hover: {
