@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useTransition, animated } from "react-spring";
 import { useLocation } from "react-router-dom";
 import { StyledMain, StyledBody, StyledPattern, StyledWrapper } from "./styles";
-import Loading from "src/components/Loading";
+import { Spinner } from "src/components/shared/";
 
 const Component = (props) => {
   const location = useLocation();
@@ -18,7 +18,7 @@ const Component = (props) => {
   }, [props.title]);
 
   if (!props.children) {
-    return <Loading />;
+    return <Spinner />;
   }
 
   const { children } = props;

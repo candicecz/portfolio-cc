@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StyledLoading } from "./styles";
+import { StyledSpinner } from "../styles";
 import { Icon } from "src/components/shared";
 
 const Component = ({ size, ...props }) => {
   return (
-    <StyledLoading {...props}>
+    <StyledSpinner {...props}>
       <Icon
         glyph={"cc-spinner"}
         fill={"bg.default"}
@@ -13,14 +13,14 @@ const Component = ({ size, ...props }) => {
         strokeWidth={"0.5"}
         size={size || 5}
       />
-    </StyledLoading>
+    </StyledSpinner>
   );
 };
 
 Component.propTypes = {
-  size: PropTypes.number
+  size: PropTypes.number,
 };
 
-Component.displayName = "Loading";
+Component.displayName = "LoadingSpinner";
 
 export default Component;

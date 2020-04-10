@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { StyledLoader, StyledWrapper, StyledPlaceholder } from "./styles";
+import { StyledLazyLoad, StyledWrapper, StyledPlaceholder } from "../styles";
 
+// Lazy loads assets(img/video) with a default placeholder
 const Component = ({ children, ...rest }) => {
   const [showLoadedAsset, setShowLoadedAsset] = useState(false);
   const [imgRef, setImgRef] = useState();
@@ -12,8 +13,8 @@ const Component = ({ children, ...rest }) => {
     if (imgRef && showLoadedAsset === false) {
       if (IntersectionObserver) {
         observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
+          (entries) => {
+            entries.forEach((entry) => {
               if (
                 !didCancel &&
                 (entry.intersectionRatio > 0 || entry.isIntersecting)
@@ -40,21 +41,22 @@ const Component = ({ children, ...rest }) => {
   }, [showLoadedAsset, imgRef, setShowLoadedAsset]);
 
   return (
-    <StyledLoader ref={setImgRef} {...rest}>
+    <StyledLazyLoad ref={setImgRef} {...rest}>
       <StyledWrapper show={!showLoadedAsset}>
         <StyledPlaceholder />
       </StyledWrapper>
       {showLoadedAsset && (
         <StyledWrapper show={showLoadedAsset}>{children}</StyledWrapper>
       )}
-    </StyledLoader>
+    </StyledLazyLoad>
   );
 };
 
 Component.propTypes = {
   aspectRatio: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.array])
+  children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
 };
+
 Component.displayName = "LazyLoad";
 
 export default Component;

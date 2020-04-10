@@ -6,7 +6,7 @@ import { Box } from "src/components/shared";
 import { theme } from "src/theme";
 import useMedia from "src/hooks/useMedia";
 import * as R from "ramda";
-import Loading from "src/components/Loading";
+import { Spinner } from "src/components/shared/";
 
 const Component = () => {
   // Determines the numbers of columns based on the current breakpoint
@@ -15,9 +15,10 @@ const Component = () => {
   const columns = useMedia(desktop_breakpoints, [4, 3, 3, 2, 1], 1);
 
   if (!projects_data) {
-    return <Loading />;
+    return <Spinner />;
   }
   const ordered_data = R.reverse(projects_data);
+
   return (
     <PageMain title="Projects">
       <Box flexWrap={"wrap"} p={[0, 0, 1, 4]}>
