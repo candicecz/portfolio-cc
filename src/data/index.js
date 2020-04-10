@@ -5,7 +5,7 @@ export const projects_data = [
     tools: "jQuery",
     categories: ["development"],
     description:
-      "This is a small project I made for learning jQuery using Flickr's API to retrieve photos based on a user's search. I added a vintage photo filter with CSS to give it a polaroid effect.",
+      "This is a small project I made for learning jQuery using Flickr's API to retrieve photos based on a ssearch. I added a vintage photo filter with CSS to give it a polaroid effect.",
     thumbnail: {
       fallback: { src: "retroflickr/thumbnail.webp", type: "image/webp" },
       main: { src: "retroflickr/thumbnail.png", type: "image/png" },
@@ -35,9 +35,9 @@ export const projects_data = [
     id: 2,
     name: "Work Flow",
     tools: "React, Node.js, MySQL, Material-UI",
-    categories: ["development", "design", "back end", "front end"],
+    categories: ["development", "design", "backend", "frontend"],
     description:
-      "I worked on this project management app with a few friends. It consists of an app that helps users organize projects, assign users to tasks, see who's on a task, message fellow team members and track progress.",
+      "I co-created this project management app with a few friends. It consists of an app that helps users organize projects, assign tasks, track progress and message fellow team members.",
     thumbnail: {
       fallback: { src: "wrkflow/thumbnail.webp", type: "image/webp" },
       main: { src: "wrkflow/thumbnail.png", type: "image/png" },
@@ -85,10 +85,10 @@ export const projects_data = [
   {
     id: 3,
     name: "CCS - It's My Life",
-    tools: "Javascript",
+    tools: "Javascript, d3.js, Python",
     categories: ["development"],
     description:
-      "I worked on this project for the Canadian Cancer Society with a team of skilled graphic designers and developers. This project aims to inform the user about daily decisions that could impact their risk of cancer. The codebase consisted of a custom in-house framework using elements of Python, d3.js and JavaScript.",
+      "I worked on this project for the Canadian Cancer Society with a team of skilled graphic designers and developers. This project aims to inform people about daily decisions that could impact their risk of cancer. The codebase consisted of a custom in-house framework using elements of Python, d3.js and JavaScript.",
     thumbnail: {
       fallback: { src: "ccs/thumbnail.webp", type: "image/webp" },
       main: { src: "ccs/thumbnail.png", type: "image/png" },
@@ -148,7 +148,7 @@ export const projects_data = [
       "illustration",
     ],
     description:
-      "I worked on this project as both a graphic designer and developer for the McGill Neurological Institute. The goal was to redesign and redevelop an existing website with a more modern look. This project was a great exercise in learning more about animations particulary in leveraging Adobe tools and JavaScript libraries to create light-weight animations.",
+      "I led the design and development of the website for CBRAIN, an application of the McGill Neurological Institute. This project was a great exercise in learning more about animation design, particulary in leveraging Adobe tools and JavaScript libraries to create light-weight animations.",
     thumbnail: {
       fallback: { src: "cbrain-website/thumbnail.webp", type: "image/webp" },
       main: { src: "cbrain-website/thumbnail.png", type: "image/png" },
@@ -219,14 +219,14 @@ export const projects_data = [
     categories: [
       "development",
       "design",
-      "front end",
-      "back end",
+      "frontend",
+      "backend",
       "UI/UX",
       "icon design",
       "software architecture",
     ],
     description:
-      "CBRAIN wanted to create a new user interface for their computing application. This project encompassed the full spectrum of my skills and was a fantastic learning opportunity. Their goals were to have a front-end entirely separate from the back-end that used their new API. On the back-end side, I wrote the GraphQL server-side code and authentication layer. On the front-end, I led the project and made the software architecture decisions as well as created the design system. On a UX note, I was in charge of the layout design and icon design. ",
+      "The McGill Neurological Institute wanted to create a new user interface for their computing application CBRAIN. Their main objective was to have a brand-new interface that used their new API. On the back-end, I wrote the GraphQL server-side code and authentication layer. On the front-end, I led the project development by making software architecture decisions, implementing the design system and writing the code. On a UX note, I designed a layout based on user workflow and crafted UI elements to further facilitate ease of use. Needless to say, this project encompassed the full spectrum of my skills and was a fantastic learning opportunity.",
     thumbnail: {
       fallback: {
         src: "cbrain-application/thumbnail.webp",
@@ -344,7 +344,7 @@ export const projects_data = [
     id: 6,
     name: "NeuroHUB",
     tools: "Ruby on Rails",
-    categories: ["development", "design", "front end", "UI/UX", "icon design"],
+    categories: ["development", "design", "frontend", "UI/UX", "icon design"],
     description:
       "The goal: Build a functional data management application in three months. Built with a team of developers, this app was built in an agile fashion using CBRAIN as its backbone. I handled the front-end side as well as the design (which was based on the NeuroHub website).",
     thumbnail: {
