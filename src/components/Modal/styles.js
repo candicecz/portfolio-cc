@@ -43,9 +43,9 @@ export const StyledClose = styled(Box).attrs((props) => ({}))`
 
   cursor: pointer;
   transition: 0.3s;
-  opacity: 0.5;
+  opacity: 1;
   &:hover {
-    opacity: 1;
+    opacity: 0.75;
   }
 `;
 

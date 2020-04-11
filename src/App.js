@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Switch,
-  Route,
-  BrowserRouter as Router,
-  useLocation,
-  Redirect,
-} from "react-router-dom";
+import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "src/theme";
@@ -21,14 +15,12 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header />
-      <Router forceRefresh={true}>
-        <Switch location={location}>
-          <Route exact path="/about" component={About}></Route>
-          <Route exact path="/projects" component={Projects}></Route>
-          <Route path="/projects/:id" component={Project}></Route>
-          <Redirect from="/" to="/projects" />
-        </Switch>
-      </Router>
+      <Switch location={location}>
+        <Route exact={true} path="/about" component={About} />
+        <Route exact={true} path="/projects" component={Projects} />
+        <Route exact={true} path="/projects/:id" component={Project} />
+        <Redirect from="/" to="/projects" />
+      </Switch>
     </ThemeProvider>
   );
 };
