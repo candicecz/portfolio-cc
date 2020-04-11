@@ -3,6 +3,7 @@ import { normalize } from "styled-normalize";
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
+
   html {
     font-size: 16px;
     font-family: Heebo;
@@ -10,9 +11,9 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     min-width: 17.5rem;
     min-height: 100vh;
-   
+
   }
-  
+
   html, body {
     width: 100%;
     margin:0;
@@ -22,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     display:flex;
     flex-direction:column;
     flex: 1;
-  } 
+  }
 
   #root {
     flex: 1;
@@ -30,13 +31,17 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
   }
 
-  * { 
+  * {
     box-sizing: border-box;
   }
 
   a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
+  }
+
+  img:-moz-loading {
+    visibility: hidden;
   }
 `;
 
