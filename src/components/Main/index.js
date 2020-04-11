@@ -5,6 +5,8 @@ import { useLocation } from "react-router-dom";
 import { StyledMain, StyledBody, StyledPattern, StyledWrapper } from "./styles";
 import { Spinner } from "src/components/shared/";
 
+// Sets the base layout for the pages.
+
 const Component = (props) => {
   const location = useLocation();
   const transitions = useTransition(location, (location) => location.pathname, {
@@ -59,6 +61,6 @@ Component.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.array]),
 };
 
-Component.displayName = "PageMain";
+Component.displayName = "Main";
 
 export default Component;

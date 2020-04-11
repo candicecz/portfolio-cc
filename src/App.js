@@ -19,7 +19,7 @@ const App = () => {
         <Route exact={true} path="/about" component={About} />
         <Route exact={true} path="/projects" component={Projects} />
         <Route exact={true} path="/projects/:id" component={Project} />
-        <Redirect from="/" to="/projects" />
+        <Redirect from="/" to="/about" />
       </Switch>
     </ThemeProvider>
   );

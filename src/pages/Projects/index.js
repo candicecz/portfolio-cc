@@ -1,6 +1,6 @@
 import React from "react";
 import { projects_data } from "src/data";
-import PageMain from "src/components/PageMain";
+import Main from "src/components/Main";
 import { Thumbnail } from "src/components/Project";
 import { Box } from "src/components/shared";
 import { theme } from "src/theme";
@@ -20,7 +20,7 @@ const Component = () => {
   const ordered_data = R.reverse(projects_data);
 
   return (
-    <PageMain title="Projects">
+    <Main title="Projects">
       <Box flexWrap={"wrap"} p={[0, 0, 1, 4]}>
         {ordered_data.map((project, i) => {
           return (
@@ -33,7 +33,7 @@ const Component = () => {
           );
         })}
       </Box>
-    </PageMain>
+    </Main>
   );
 };
 

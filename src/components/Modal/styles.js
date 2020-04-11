@@ -45,7 +45,7 @@ export const StyledClose = styled(Box).attrs((props) => ({}))`
   transition: 0.3s;
   opacity: 1;
   &:hover {
-    opacity: 0.75;
+    opacity: 0.5;
   }
 `;
 
