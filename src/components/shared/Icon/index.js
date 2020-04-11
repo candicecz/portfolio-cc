@@ -10,8 +10,8 @@ const Component = ({
   size = 1.5,
   onClick,
   fill,
-  strokeWidth,
   stroke,
+  strokeWidth,
   ...rest
 }) => {
   let fillColor =
@@ -42,7 +42,7 @@ const Component = ({
 
 Component.defaultProps = {
   stroke: "#000",
-  fill: "none"
+  fill: "none",
 };
 
 Component.propTypes = {
@@ -51,7 +51,7 @@ Component.propTypes = {
   strokeWidth: PropTypes.string,
   stroke: PropTypes.string,
   size: PropTypes.number,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 Component.displayName = "Icon";

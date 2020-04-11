@@ -192,7 +192,11 @@ export const projects_data = [
             main: { src: "cbrain-website/features.mp4", type: "video/mp4" },
           },
         ],
-        styles: { maxWidth: "200px", aspectRatio: "100%" },
+        styles: {
+          maxWidth: "400px",
+          minWidth: "400px",
+          boxShadow: "none",
+        },
       },
       {
         title: "Mobile View",

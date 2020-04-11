@@ -7,7 +7,13 @@ const Component = (props) => {
   return (
     <StyledDefaultLink {...props}>
       {props.icon && (
-        <Icon glyph={props.icon} mr={2} stroke={"text.primary"} size={1} />
+        <Icon
+          glyph={props.icon}
+          mr={2}
+          fill={"text.primary"}
+          stroke={"text.primary"}
+          size={1}
+        />
       )}
       <Text
         variant={"title-xs"}

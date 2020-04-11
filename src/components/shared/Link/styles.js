@@ -120,7 +120,7 @@ export const StyledDefaultLink = styled(NavLink).attrs((props) => ({
     letter-spacing: 0.9px;
   }
   &:hover {
-    ${Text} {
+    > * {
       opacity: 0.5;
       letter-spacing: 0.1rem;
       transition: ${(props) => props.theme.transitions.hover.on};
