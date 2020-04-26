@@ -52,30 +52,48 @@ const Component = () => {
                   name="linkedin"
                   to={"https://linkedin.com/in/candiceczech"}
                   target={"_blank"}
+                  rel={"noreferrer"}
                   mx={[0, 0, 1]}
                   borderColor={"bg.default"}
                 >
-                  <Icon glyph={"linkedin"} fill={"#FFFFFF"} stroke="none" />
+                  <Icon
+                    title={"linkedin"}
+                    glyph={"linkedin"}
+                    fill={"#FFFFFF"}
+                    stroke="none"
+                  />
                 </Link>
                 <Link
                   variant="social"
                   name="medium"
                   to={"https://medium.com/@czech.candice"}
                   target={"_blank"}
+                  rel={"noreferrer"}
                   mx={[0, 0, 1]}
                   borderColor={"bg.default"}
                 >
-                  <Icon glyph={"medium"} fill={"#FFFFFF"} stroke={"none"} />
+                  <Icon
+                    title={"medium"}
+                    glyph={"medium"}
+                    fill={"#FFFFFF"}
+                    stroke={"none"}
+                  />
                 </Link>
                 <Link
                   variant="social"
                   name="github"
                   to={"https://github.com/candicecz"}
                   target={"_blank"}
+                  rel={"noreferrer"}
                   mx={[0, 0, 1]}
                   borderColor={"bg.default"}
                 >
-                  <Icon glyph={"github"} stroke={"#FFFFFF"} fill={"#FFFFFF"} />
+                  <Icon
+                    title={"github"}
+                    glyph={"github"}
+                    stroke={"#FFFFFF"}
+                    fill={"#FFFFFF"}
+                  />
                 </Link>
               </Box>
             </StyledRow>

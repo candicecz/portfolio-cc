@@ -9,6 +9,7 @@ const Component = (props) => {
       {props.icon && (
         <Icon
           glyph={props.icon}
+          title={props.title}
           mr={2}
           fill={"text.primary"}
           stroke={"text.primary"}
@@ -29,6 +30,7 @@ const Component = (props) => {
 
 Component.propTypes = {
   icon: PropTypes.string,
+  title: PropTypes.string,
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
 };
 

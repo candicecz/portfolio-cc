@@ -32,6 +32,7 @@ const Component = ({ delay, project }) => {
                 {project.websiteURI && (
                   <Box flex={1} alignItems={"center"} mt={2} mb={[4, 4, 2]}>
                     <Link
+                      rel={"noreferrer"}
                       target={"_blank"}
                       to={project.websiteURI}
                       mt={0}

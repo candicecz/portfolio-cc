@@ -18,6 +18,7 @@ const Component = () => {
       </Layout.Main>
       <Icon
         glyph={"cc-logo"}
+        title={"cc-icon"}
         fill={"bg.wash"}
         stroke={"bg.primary"}
         size={2}

@@ -15,6 +15,7 @@ const Component = ({ children, handleClose, hasBackdrop, ...props }) => {
       {handleClose && (
         <StyledClose onClick={handleClose}>
           <Icon
+            title={"close"}
             fill={"bg.reverse"}
             stroke={"bg.reverse"}
             glyph={"close"}

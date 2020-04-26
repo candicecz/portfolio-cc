@@ -3,12 +3,12 @@
   "name": "Portfolio",
   "icons": [
     {
-      "src": "./assets/cc-icon_512x512.png",
+      "src": "./cc-icon_512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/public",
   "background_color": "#FFF",
   "theme_color": "#371C7D",
   "display": "standalone"

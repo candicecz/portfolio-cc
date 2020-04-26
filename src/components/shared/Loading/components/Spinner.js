@@ -8,6 +8,7 @@ const Component = ({ size, ...props }) => {
     <StyledSpinner {...props}>
       <Icon
         glyph={"cc-spinner"}
+        title={"Loader"}
         fill={"bg.default"}
         stroke={"bg.primary"}
         strokeWidth={"0.5"}
