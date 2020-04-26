@@ -23,6 +23,7 @@ export const GlobalStyle = createGlobalStyle`
     display:flex;
     flex-direction:column;
     flex: 1;
+    overflow-x: hidden;
   }
 
   #root {

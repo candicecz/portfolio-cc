@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import * as R from "ramda";
 import { useParams } from "react-router-dom";
@@ -11,6 +11,10 @@ const Component = ({ isActive, project, delay = 300, ...rest }) => {
   const [componentProps, setComponentProps] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const params = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!project && params.id) {
     project = R.filter((p) => +p.id === +params.id, projects_data)[0];

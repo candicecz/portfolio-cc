@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { StyledSection, StyledText } from "../styles";
 import { Box, Layout } from "src/components/shared";
@@ -47,6 +47,7 @@ const Component = ({ children, color, delay, sections }) => {
 };
 
 Component.propTypes = {
+  children: PropTypes.func,
   color: PropTypes.string,
   delay: PropTypes.number,
   sections: PropTypes.array,
