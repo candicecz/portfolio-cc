@@ -12,6 +12,7 @@ const Component = ({
   fill,
   stroke,
   strokeWidth,
+  title,
   ...rest
 }) => {
   let fillColor =
@@ -33,7 +34,8 @@ const Component = ({
       onClick={onClick}
       {...rest}
     >
-      <InlineSvg>
+      <InlineSvg ariaLabelledBy={title && "title"}>
+        {title && <title id="title">{title}</title>}
         <Glyph glyph={glyph} />
       </InlineSvg>
     </SvgWrapper>
