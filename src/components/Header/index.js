@@ -49,6 +49,7 @@ const Component = () => {
               <Box width={"100%"} justifyContent={"space-between"} my={2}>
                 <Link
                   variant="social"
+                  name="linkedin"
                   to={"https://linkedin.com/in/candiceczech"}
                   target={"_blank"}
                   mx={[0, 0, 1]}
@@ -58,6 +59,7 @@ const Component = () => {
                 </Link>
                 <Link
                   variant="social"
+                  name="medium"
                   to={"https://medium.com/@czech.candice"}
                   target={"_blank"}
                   mx={[0, 0, 1]}
@@ -67,6 +69,7 @@ const Component = () => {
                 </Link>
                 <Link
                   variant="social"
+                  name="github"
                   to={"https://github.com/candicecz"}
                   target={"_blank"}
                   mx={[0, 0, 1]}
