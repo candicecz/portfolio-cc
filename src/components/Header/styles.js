@@ -4,7 +4,7 @@ import { position, layout, space } from "styled-system";
 
 export const StyledHeader = styled(Layout.Main).attrs((props) => ({
   flexDirection: "column",
-  py: 7,
+  py: 4,
   zIndex: 1000,
   bg: "bg.primary",
   maxWidth: "unset",

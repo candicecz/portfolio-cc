@@ -5,7 +5,6 @@ import {
   StyledThumbnail,
   StyledThumbnailOverlay,
 } from "../styles";
-import { LazyLoad } from "src/components/shared/";
 import { Text } from "src/components/shared";
 
 const Component = (props) => {
@@ -17,27 +16,25 @@ const Component = (props) => {
   return (
     <StyledThumbnailWrapper {...props}>
       <StyledThumbnail style={{ width: "100%", height: "100%" }}>
-        <LazyLoad aspectRatio={`${(3 / 4) * 100}%`}>
-          <picture style={{ width: "100%", height: "100%" }}>
-            {fallback && (
-              <source
-                srcSet={require(`src/assets/${fallback.src}`)}
-                type={fallback.type}
-              ></source>
-            )}
-            {main && (
-              <source
-                srcSet={require(`src/assets/${main.src}`)}
-                type={main.type}
-              ></source>
-            )}
-            <img
-              style={{ width: "100%", height: "100%" }}
-              alt={"Project thumbnail."}
-              src={require(`src/assets/${main.src}`)}
-            />
-          </picture>
-        </LazyLoad>
+        <picture style={{ width: "100%", height: "100%" }}>
+          {fallback && (
+            <source
+              srcSet={require(`src/assets/${fallback.src}`)}
+              type={fallback.type}
+            ></source>
+          )}
+          {main && (
+            <source
+              srcSet={require(`src/assets/${main.src}`)}
+              type={main.type}
+            ></source>
+          )}
+          <img
+            style={{ width: "100%", height: "100%" }}
+            alt={"Project thumbnail."}
+            src={require(`src/assets/${main.src}`)}
+          />
+        </picture>
         <StyledThumbnailOverlay to={{ pathname: `/projects/${id}` }}>
           <Text
             variant={["title-sm", "title-md"]}
