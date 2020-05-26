@@ -7,6 +7,7 @@ import Header from "src/components/Header";
 import About from "src/pages/About";
 import Projects from "src/pages/Projects";
 import Project from "src/pages/Project";
+import Pages from "src/pages";
 
 const App = () => {
   let location = useLocation();
@@ -16,7 +17,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Switch location={location}>
-        <Route exact={true} path="/about" component={About} />
+        <Route exact={true} path="/" component={Pages} />
         <Route exact={true} path="/projects" component={Projects} />
         <Route exact={true} path="/projects/:id" component={Project} />
         <Redirect from="/" to="/about" />
