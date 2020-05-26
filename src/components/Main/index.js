@@ -8,12 +8,12 @@ import { Spinner } from "src/components/shared/";
 // Sets the base layout for the pages.
 
 const Component = (props) => {
-  const location = useLocation();
-  const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0, transform: "translate(100%,0)" },
-    enter: { opacity: 1, transform: "translate(0%,0)" },
-    leave: { opacity: 1, transform: "translate(-100%,0)" },
-  });
+  // const location = useLocation();
+  // const transitions = useTransition(location, (location) => location.pathname, {
+  //   from: { opacity: 0, transform: "translate(100%,0)" },
+  //   enter: { opacity: 1, transform: "translate(0%,0)" },
+  //   leave: { opacity: 1, transform: "translate(-100%,0)" },
+  // });
 
   useEffect(() => {
     document.title = `Candice Czech - ${props.title}`;
@@ -28,7 +28,7 @@ const Component = (props) => {
   return (
     <StyledWrapper>
       <StyledMain>
-        {transitions.map(({ _, props: transition, key }) => {
+        {/* {transitions.map(({ _, props: transition, key }) => {
           return (
             <animated.div
               key={key}
@@ -40,11 +40,11 @@ const Component = (props) => {
                 opacity: transition.opacity,
                 transform: transition.transform,
               }}
-            >
-              <StyledBody {...props}>{children}</StyledBody>
-            </animated.div>
+            > */}
+        <StyledBody {...props}>{children}</StyledBody>
+        {/* </animated.div>
           );
-        })}
+        })} */}
       </StyledMain>
       <StyledPattern>
         <img

@@ -8,7 +8,7 @@ import {
   StyledAbout,
   StyledLoader,
 } from "./styles";
-import { Box, Spinner } from "src/components/shared";
+import { Box, Spinner, Text } from "src/components/shared";
 
 const Component = () => {
   const animationEl = useRef(null);
@@ -34,7 +34,7 @@ const Component = () => {
   }, []);
 
   return (
-    <Main title="About">
+    <Main id="about" setTitle="About">
       <Box flexDirection={["column", "column", "column", "row"]}>
         <StyledAnimationWrapper>
           <Box width={"100%"} maxWidth={"22rem"}>
@@ -63,6 +63,34 @@ const Component = () => {
             be nature, the decor at a restaurant or art from a graphic novel.
           </StyledText>
         </StyledAbout>
+      </Box>
+      <Box>
+        <Box mx={4} my={8} width="100%" bg="bg.default" boxShadow="md">
+          <Box p={7} flex={1} flexDirection="column" alignItems={"center"}>
+            <img
+              style={{ maxWidth: "100px" }}
+              src="src/assets/cc-icon_favicon.png"
+            ></img>
+            <Text variant="title-sm">Detail 1</Text>
+            <Text variant="text-sm">Details about one thing</Text>
+          </Box>
+          <Box p={7} flex={1} flexDirection="column" alignItems={"center"}>
+            <img
+              style={{ maxWidth: "100px" }}
+              src="src/assets/cc-icon_favicon.png"
+            ></img>
+            <Text variant="title-sm">Detail 1</Text>
+            <Text variant="text-sm">Details about one thing</Text>
+          </Box>
+          <Box p={7} flex={1} flexDirection="column" alignItems={"center"}>
+            <img
+              style={{ maxWidth: "100px" }}
+              src="src/assets/cc-icon_favicon.png"
+            ></img>
+            <Text variant="title-sm">Detail 1</Text>
+            <Text variant="text-sm">Details about one thing</Text>
+          </Box>
+        </Box>
       </Box>
     </Main>
   );

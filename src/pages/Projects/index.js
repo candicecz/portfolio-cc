@@ -20,7 +20,7 @@ const Component = () => {
   const ordered_data = R.reverse(projects_data);
 
   return (
-    <Main title="Projects">
+    <Main id={"projects"} setTitle="Projects">
       <Box flexWrap={"wrap"} p={[0, 0, 1, 4]}>
         {ordered_data.map((project, i) => {
           return (

@@ -105,14 +105,14 @@ const Component = () => {
         >
           <StyledNavLink
             variant={"navigation"}
-            to="/projects"
+            to={"/#projects"}
             justifyContent={["center", "flex-start"]}
           >
             Projects
           </StyledNavLink>
           <StyledNavLink
             variant={"navigation"}
-            to="/about"
+            to={"/#about"}
             justifyContent={["center", "flex-end"]}
           >
             About

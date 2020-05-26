@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HashLink } from "react-router-hash-link";
 import { NavLink } from "react-router-dom";
 import {
   border,
@@ -10,7 +11,7 @@ import {
 } from "styled-system";
 import { Text } from "src/components/shared/";
 
-export const StyledNavigationLink = styled(NavLink).attrs((props) => ({
+export const StyledNavigationLink = styled(HashLink).attrs((props) => ({
   mb: 2,
   py: props.py || 1,
   color: props.color,

@@ -6,12 +6,7 @@ import { Box, Text } from "src/components/shared/";
 const Component = (props) => {
   return (
     <Box zIndex={100} {...props}>
-      <StyledNavigationLink
-        exact
-        activeClassName="selected"
-        to={props.to}
-        color={props.color}
-      >
+      <StyledNavigationLink to={props.to} color={props.color}>
         <Text
           variant="title-xs"
           color={props.color}

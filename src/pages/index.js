@@ -6,8 +6,8 @@ import { Box } from "src/components/shared";
 const Component = () => {
   return (
     <Box flexDirection={"column"}>
-      <About></About>
-      <Projects></Projects>
+      <About />
+      <Projects />
     </Box>
   );
 };

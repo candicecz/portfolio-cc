@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route, useLocation, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
@@ -18,9 +18,7 @@ const App = () => {
       <Header />
       <Switch location={location}>
         <Route exact={true} path="/" component={Pages} />
-        <Route exact={true} path="/projects" component={Projects} />
         <Route exact={true} path="/projects/:id" component={Project} />
-        <Redirect from="/" to="/about" />
       </Switch>
     </ThemeProvider>
   );
