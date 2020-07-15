@@ -47,11 +47,10 @@ export const StyledThumbnailOverlay = styled(RouterLink).attrs((props) => ({}))`
   align-items: center;
   position: absolute;
 
-
   &:before {
     content: "";
     background-color: ${(props) => props.theme.colors.bg.reverse};
-    opacity:  0.6;
+    opacity: 0.6;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -59,48 +58,30 @@ export const StyledThumbnailOverlay = styled(RouterLink).attrs((props) => ({}))`
     left: 0;
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints[1]}) {
-    height: 100%;
-    &::before {
-        background-color: transparent;
-    }
-    * {
-      transition: top 0.2s linear, transform 0.2s linear;
+  transition: ${(props) => props.theme.transitions.hover.off};
 
-      &:first-child {
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        left: 0
-        transform: translate(0, -200%);
-      }
-      &:last-child {
-        position: absolute;
-        opacity: 0;
-        bottom: 0;
-        left: 0
-
-        transform: translate(0, 200%);
-      }
-    }
-
-    &:hover {
-      background-color: ${(props) => props.theme.colors.bg.reverse};
-      * {
-        transition: top 0.2s linear, transform 0.2s linear;
-
-        &:first-child,
-        &:last-child {
-          opacity: 1;
-          position: unset;
-          top: auto;
-          transform: translate(0, 0);
-        }
-      }
-    }
+  & > :first-child {
+    transition: transform 0.2s ease-in-out;
+    transform: translate(0, 0);
   }
-  @media screen and (min-width: ${(props) => props.theme.breakpoints[1]}) {
-    padding: ${(props) => props.theme.space[3]};
+  & > :last-child {
+    transition: transform 0.2s ease-in-out;
+    transform: translate(0, 0);
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0.7;
+      transition: ${(props) => props.theme.transitions.hover.on};
+    }
+    & > :first-child {
+      transition: transform 0.2s ease-in-out;
+      transform: translate(0, -30%);
+    }
+    & > :last-child {
+      transition: transform 0.2s ease-in-out;
+      transform: translate(0, 30%);
+    }
   }
 `;
 
