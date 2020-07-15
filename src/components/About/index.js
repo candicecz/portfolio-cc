@@ -77,31 +77,31 @@ const Component = () => {
           <StyledSkill>
             <img
               alt={"Programming Skills"}
-              src={require(`src/assets/cc-icon_favicon.png`)}
+              src={require(`src/assets/skill_technical.svg`)}
             />
             <Text variant="title-xxs" color="bg.primary" py={1}>
               Technical
             </Text>
             <Text variant="xs" color="text.secondary" textAlign="center">
-              JavaScript, Node.js, React, GraphQL
+              JavaScript, Node.js, React, GraphQL, HTML/CSS, MySQL
             </Text>
           </StyledSkill>
           <StyledSkill>
             <img
               alt={"Design Skills"}
-              src={require(`src/assets/cc-icon_favicon.png`)}
+              src={require(`src/assets/skill_design.svg`)}
             />
             <Text variant="title-xxs" color="bg.primary" py={1}>
               Design
             </Text>
             <Text variant="xs" color="text.secondary" textAlign="center">
-              Adobe Photoshop, Adobe Illustrator, Zeplin
+              Adobe Photoshop, Adobe Illustrator, After Effects, Zeplin, Sketch
             </Text>
           </StyledSkill>
           <StyledSkill>
             <img
               alt={"Other Skills"}
-              src={require(`src/assets/cc-icon_favicon.png`)}
+              src={require(`src/assets/skill_other.svg`)}
             />
             <Text variant="title-xxs" color="bg.primary" py={1}>
               Other

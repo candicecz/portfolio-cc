@@ -45,6 +45,9 @@ export const StyledSkills = styled(Layout.Main).attrs(() => ({
   bg: "bg.default",
   display: "flex",
   flexDirection: ["column", "column", "row"],
+  flexWrap: "wrap",
+  justifyContent: ["center", "center", "center", "space-around"],
+  alignItems: "center",
   py: 4,
   boxShadow: "sm",
 }))``;
@@ -53,9 +56,10 @@ export const StyledSkill = styled(Box).attrs(() => ({
   flex: 1,
   flexDirection: "column",
   alignItems: "center",
-  py: 4,
-  px: [0, 0, 4],
+  p: [4, 4, 4, 7],
+  minWidth: ["200px", "250px", "300px"],
 }))`
+  max-width: 300px;
   img {
     width: 50%;
     height: auto;

@@ -118,9 +118,7 @@ ${space}
   transform-origin: bottom;
   animation: animateWaveOut 500ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   transform-origin: bottom;
-  path {
-    opacity: 0.5;
-  }
+
   ${(props) =>
     props.isToolbar === true &&
     css`
