@@ -4,16 +4,23 @@ import * as R from "ramda";
 import { useParams } from "react-router-dom";
 import { projects_data } from "src/data";
 import { StyledProject } from "./styles";
-import { Details, Gallery, Asset, Footer } from "src/components/Project";
+import { Details, Gallery, Asset } from "src/components/Project";
 import Modal from "src/components/Modal";
 
-const Component = ({ isActive, project, delay = 300, ...rest }) => {
+const Component = ({
+  isActive,
+  setActiveSection,
+  project,
+  delay = 300,
+  ...rest
+}) => {
   const [componentProps, setComponentProps] = useState(false);
   const [isModalOpen, setModalOpen] = useState(false);
   const params = useParams();
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setActiveSection({ id: null });
   }, []);
 
   if (!project && params.id) {
@@ -44,7 +51,6 @@ const Component = ({ isActive, project, delay = 300, ...rest }) => {
             ></Asset>
           )}
         </Gallery>
-        <Footer />
       </StyledProject>
     </React.Fragment>
   );
@@ -53,6 +59,7 @@ const Component = ({ isActive, project, delay = 300, ...rest }) => {
 Component.propTypes = {
   project: PropTypes.object,
   isActive: PropTypes.bool,
+  setActiveSection: PropTypes.func.isRequired,
   delay: PropTypes.number,
 };
 

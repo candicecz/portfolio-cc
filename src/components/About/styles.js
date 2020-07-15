@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, Text } from "src/components/shared";
+import { Box, Layout, Text } from "src/components/shared";
 
 export const StyledAnimationWrapper = styled(Box).attrs(() => ({
   flex: 1,
@@ -31,5 +31,33 @@ export const StyledLoader = styled(Box).attrs(() => ({
     content: "";
     display: block;
     padding-bottom: 100%;
+  }
+`;
+
+/*
+=============================================================
+| About - Skills
+=============================================================
+*/
+
+export const StyledSkills = styled(Layout.Main).attrs(() => ({
+  my: 4,
+  bg: "bg.default",
+  display: "flex",
+  flexDirection: ["column", "column", "row"],
+  py: 4,
+  boxShadow: "sm",
+}))``;
+
+export const StyledSkill = styled(Box).attrs(() => ({
+  flex: 1,
+  flexDirection: "column",
+  alignItems: "center",
+  py: 4,
+  px: [0, 0, 4],
+}))`
+  img {
+    width: 50%;
+    height: auto;
   }
 `;

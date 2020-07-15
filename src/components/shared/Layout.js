@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import { theme } from "src/theme";
-import { color, flexbox, grid, layout, position, space } from "styled-system";
+import {
+  color,
+  flexbox,
+  grid,
+  layout,
+  position,
+  shadow,
+  space,
+} from "styled-system";
 
 const StyledMain = styled("div")`
     ${color}
@@ -8,6 +16,7 @@ const StyledMain = styled("div")`
     ${grid}
     ${layout}
     ${position}
+    ${shadow}
     ${space}
 `;
 
@@ -17,7 +26,7 @@ StyledMain.defaultProps = {
   maxWidth: theme.breakpoints[4],
   px: 4,
   py: 7,
-  margin: "0 auto"
+  margin: "0 auto",
 };
 
 export default { Main: StyledMain };

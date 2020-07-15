@@ -1,11 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StyledDefaultLink } from "../styles";
-import { Icon, Text } from "src/components/shared/";
+import { Icon, Text } from "src/components/shared";
+import { StyledLink, StyledText } from "../styles";
 
 const Component = (props) => {
+  const { variant } = props;
+  if (variant === "outline") {
+    return (
+      <StyledLink {...props}>
+        <StyledText color="text.primary">{props.children}</StyledText>
+      </StyledLink>
+    );
+  }
   return (
-    <StyledDefaultLink {...props}>
+    <StyledLink {...props}>
       {props.icon && (
         <Icon
           glyph={props.icon}
@@ -24,16 +32,17 @@ const Component = (props) => {
       >
         {props.children}
       </Text>
-    </StyledDefaultLink>
+    </StyledLink>
   );
 };
 
 Component.propTypes = {
+  variant: PropTypes.string,
   icon: PropTypes.string,
   title: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };
 
-Component.displayName = "DefaultLink";
+Component.displayName = "Link";
 
 export default Component;

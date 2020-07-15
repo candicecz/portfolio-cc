@@ -1,8 +1,7 @@
 import styled, { css } from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
 import { Box, Icon, Link, Text } from "src/components/shared";
-import { color, space } from "styled-system";
-
+import { border, space, color, flexbox, layout } from "styled-system";
 /*
 =============================================================
 | Thumbnail
@@ -105,29 +104,6 @@ export const StyledThumbnailOverlay = styled(RouterLink).attrs((props) => ({}))`
   }
 `;
 
-export const StyledOutlineButton = styled(Link).attrs((props) => ({
-  display: "flex",
-  alignItems: "center",
-  border: "2px solid",
-  borderColor: "bg.reverse",
-  p: 2,
-  py: 1,
-  mt: 4,
-  ...props,
-}))`
-  opacity: 0.5;
-  transition: ${(props) => props.theme.transitions.hover.off};
-  ${Text} {
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-  }
-  &:hover {
-    opacity: 1;
-    transition: ${(props) => props.theme.transitions.hover.on};
-  }
-`;
-
 export const StyledText = styled(Text).attrs((props) => ({
   variant: props.variant || "title-xs",
   color: props.color || "text.primary",
@@ -174,6 +150,60 @@ export const StyledSection = styled(Box).attrs((props) => ({
       ${(props) => props.bg} 100%
     );
   }
+`;
+
+/*
+=============================================================
+| Links
+=============================================================
+*/
+
+export const StyledLink = styled("a").attrs((props) => ({
+  px: 2,
+  pb: 4,
+  ...props,
+}))`
+  ${space};
+  ${flexbox};
+  ${layout};
+  ${border};
+  cursor: pointer;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  ${Text} {
+    text-transform: uppercase;
+    transition: ${(props) => props.theme.transitions.hover.off};
+    font-weight: 600;
+    letter-spacing: 0.9px;
+  }
+  &:hover {
+    > * {
+      opacity: 0.5;
+      letter-spacing: 0.1rem;
+      transition: ${(props) => props.theme.transitions.hover.on};
+    }
+  }
+  ${(props) =>
+    props.variant === "outline" &&
+    css`
+      border: 1px solid #e4e0ed;
+      border-radius: 2px;
+      margin-top: 0rem;
+      padding: ${props.theme.space[3]};
+      ${Text} {
+        text-transform: uppercase;
+        transition: ${(props) => props.theme.transitions.hover.off};
+        font-weight: 600;
+      }
+      &:hover {
+        ${Text} {
+          opacity: 0.5;
+          letter-spacing: 0.1rem;
+          transition: ${(props) => props.theme.transitions.hover.on};
+        }
+      }
+    `}
 `;
 
 /*
@@ -226,38 +256,4 @@ export const StyledVideo = styled("video").attrs((props) => ({
 }))`
   width: 100%;
   box-shadow: ${(props) => props.theme.shadows.sm};
-`;
-
-/*
-=============================================================
-| Footer
-=============================================================
-*/
-
-export const StyledFooter = styled(Box).attrs(() => ({
-  display: "block",
-  position: "relative",
-}))`
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    background: ${(props) => props.theme.colors.bg.wash};
-  }
-`;
-
-export const StyledArrow = styled(Icon).attrs(() => ({
-  glyph: "caret-up",
-  stroke: "text.primary",
-  fill: "text.primary",
-  size: 1,
-}))`
-  cursor: pointer;
-  transition: ${(props) => props.theme.transitions.hover.off};
-  &:hover {
-    opacity: 0.5;
-    transition: ${(props) => props.theme.transitions.hover.on};
-  }
 `;

@@ -1,6 +1,6 @@
 {
   "short_name": "Portfolio",
-  "name": "Portfolio",
+  "name": "Candice Czech Portfolio",
   "icons": [
     {
       "src": "./assets/cc-icon_512x512.png",
@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": "/index.html",
   "background_color": "#FFF",
   "theme_color": "#371C7D",
   "display": "standalone"

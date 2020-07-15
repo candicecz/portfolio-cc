@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "./Link";
 import { StyledList, StyledSection, StyledText } from "../styles";
-import { Box, Layout, Link, Spinner, Text } from "src/components/shared";
+import { Box, Layout, Spinner, Text } from "src/components/shared";
 import { Slug } from "src/components/shared";
 
 const Component = ({ delay, project }) => {
@@ -12,7 +13,13 @@ const Component = ({ delay, project }) => {
     <StyledSection bg="bg.default" py={4}>
       <Layout.Main py={0}>
         <Slug delay={delay}>
-          <Link to="/projects" icon="caret-left" px={0} py={4}>
+          <Link
+            title="back_projects"
+            href="/#projects"
+            icon="caret-left"
+            px={0}
+            py={4}
+          >
             Back to Projects
           </Link>
           <Box flexDirection="column">
@@ -34,9 +41,10 @@ const Component = ({ delay, project }) => {
                     <Link
                       rel={"noreferrer"}
                       target={"_blank"}
-                      to={project.websiteURI}
+                      href={project.websiteURI}
                       mt={0}
                       variant="outline"
+                      title="outline_button"
                     >
                       <StyledText color="text.primary">
                         Visit Website

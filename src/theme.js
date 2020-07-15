@@ -36,6 +36,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  .preload, .preload * {
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+  }
+
   a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
@@ -131,7 +136,7 @@ export const theme = {
       fontFamily: "system-ui, sans-serif",
       fontWeight: 400,
       fontSize: "0.75rem",
-      lineHeight: "1.5rem",
+      lineHeight: "1.25rem",
     },
     sm: {
       fontFamily: "system-ui, sans-serif",
