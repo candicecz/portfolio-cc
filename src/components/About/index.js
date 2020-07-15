@@ -72,7 +72,7 @@ const Component = () => {
           </Box>
         </Slug>
       </SectionWrapper>
-      <SectionWrapper sectionTitle={"Skills"} bg={"none"} my={4}>
+      <SectionWrapper sectionTitle={"Skills"} bg={"none"} my={[4, 4, 7]}>
         <StyledSkills>
           <StyledSkill>
             <img

@@ -84,7 +84,7 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
                   fill={"bg.default"}
                   stroke={"bg.primary"}
                   size={2}
-                  mx={2}
+                  mx={3}
                   zIndex={1000}
                 />
                 {sections && (
@@ -93,6 +93,7 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
                     activeSectionId={activeSectionId}
                     isToolbar={isToolbar}
                     setActiveSection={(v) => setActiveSection(v)}
+                    mx={3}
                   />
                 )}
               </React.Fragment>
