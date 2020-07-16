@@ -62,12 +62,11 @@ const Component = ({ sections, activeSection, setActiveSection }) => {
 
   return (
     <Box flexDirection={"column"} ref={rootEl}>
-      {sections.map(({ id, title, component }, i) => {
+      {sections.map(({ id, component }) => {
         return (
           <StyledSection
             key={id}
             id={id}
-            index={i}
             ref={(el) => (sectionEl.current[id].ref = el)}
           >
             {component}

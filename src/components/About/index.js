@@ -22,6 +22,7 @@ const Component = () => {
       container: animationEl.current,
       renderer: "svg",
       autoplay: true,
+      loop: true,
       animationData: animationData,
       rendererSettings: { preserveAspectRatio: "xMidYMid slice" },
     });

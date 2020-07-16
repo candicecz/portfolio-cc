@@ -53,6 +53,7 @@ Component.propTypes = {
   strokeWidth: PropTypes.string,
   stroke: PropTypes.string,
   size: PropTypes.number,
+  title: PropTypes.string,
   onClick: PropTypes.func,
 };
 
