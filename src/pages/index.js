@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 
 import PropTypes from "prop-types";
 import Header from "src/components/Header";
@@ -8,16 +8,14 @@ import Projects from "src/components/Projects";
 
 // Manages + styles each page's layout.
 const Component = ({ children }) => {
-  const location = useLocation();
+  const [isHeaderInView, setIsHeaderInView] = useState(null);
+  const history = useHistory();
 
   const [activeSection, setActiveSection] = useState((prev) => {
-    // Set the active state to the location hash if it exists
-    if (location.hash && location.hash.slice(1)) {
-      return { ratio: 0, id: location.hash.slice(1) };
-    }
     return {
       id: null,
       ratio: 0,
+      ref: null,
     };
   });
 
@@ -34,23 +32,26 @@ const Component = ({ children }) => {
     },
   ]);
 
-  // Set the title to the active section
   useEffect(() => {
-    document.title = `Candice Czech ${
-      activeSection.id
-        ? ` - ${
-            activeSection.id.charAt(0).toUpperCase() + activeSection.id.slice(1)
-          }`
-        : ""
-    }`;
-  }, [activeSection]);
+    const current_hash = history.location.hash;
+    if (isHeaderInView === false && activeSection.id) {
+      if (current_hash.slice(1) !== activeSection.id) {
+        history.push(`#${activeSection.id}`);
+      }
+    }
+    if (isHeaderInView === true && activeSection.id) {
+      if (current_hash) {
+        history.push("");
+      }
+    }
+  }, [isHeaderInView, activeSection, history]);
 
   return (
     <React.Fragment>
       <Header
         sections={sections}
         activeSectionId={activeSection && activeSection.id}
-        setActiveSection={(v) => setActiveSection(v)}
+        setIsHeaderInView={(v) => setIsHeaderInView(v)}
       />
       {children({
         sections: sections,

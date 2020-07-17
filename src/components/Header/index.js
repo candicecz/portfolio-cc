@@ -12,7 +12,7 @@ import {
   StyledSVG,
 } from "./styles";
 
-const Component = ({ sections, activeSectionId, setActiveSection }) => {
+const Component = ({ sections, activeSectionId, setIsHeaderInView }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isToolbar, setIsToolbar] = useState(false);
   const headerEl = useRef(false);
@@ -26,17 +26,10 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
   const callback = (entries) => {
     entries.forEach((entry) => {
       // Reset the active section when the header is in view at 50%
-      setActiveSection((prev) =>
-        prev.id && entry.intersectionRatio > 0.5
-          ? { id: null, ratio: null }
-          : prev
-      );
-
+      setIsHeaderInView(entry.isIntersecting);
       // Toggle the toolbar when the header is almost out of view
       setIsToolbar((prev) =>
-        prev !== entry.intersectionRatio < 0.01
-          ? entry.intersectionRatio < 0.01
-          : prev
+        prev !== !entry.isIntersecting ? !entry.isIntersecting : prev
       );
     });
   };
@@ -47,10 +40,11 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
 
   // Show toolbar only on mobile view.
   useEffect(() => {
-    isDesktop && observer.observe(headerEl.current);
+    const el = headerEl.current;
+    isDesktop && observer.observe(el);
+    setIsToolbar((prev) => (isDesktop ? prev : false));
     return () => {
-      setIsToolbar((prev) => (isDesktop ? prev : false));
-      observer.unobserve(headerEl.current);
+      observer.unobserve(el);
     };
   }, [headerEl, observer, isDesktop]);
 
@@ -69,7 +63,6 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
               sections={sections}
               activeSectionId={activeSectionId}
               isToolbar={isToolbar}
-              setActiveSection={(v) => setActiveSection(v)}
             />
           )}
 
@@ -92,7 +85,6 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
                     sections={sections}
                     activeSectionId={activeSectionId}
                     isToolbar={isToolbar}
-                    setActiveSection={(v) => setActiveSection(v)}
                     mx={3}
                   />
                 )}
@@ -136,7 +128,7 @@ const Component = ({ sections, activeSectionId, setActiveSection }) => {
 Component.propTypes = {
   sections: PropTypes.array,
   activeSectionId: PropTypes.string,
-  setActiveSection: PropTypes.func,
+  setIsHeaderInView: PropTypes.func,
 };
 
 Component.displayName = "Header";

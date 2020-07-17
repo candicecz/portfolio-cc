@@ -24,13 +24,7 @@ const NavigationLink = (props) => {
   );
 };
 
-const Component = ({
-  sections,
-  activeSectionId,
-  isToolbar,
-  setActiveSection,
-  ...rest
-}) => {
+const Component = ({ sections, activeSectionId, isToolbar, ...rest }) => {
   return (
     <StyledNavigationRow flex={1} {...rest}>
       {sections.map((n) => {
@@ -39,11 +33,6 @@ const Component = ({
             key={n.id}
             href={`/#${n.id}`}
             isToolbar={isToolbar}
-            onClick={() =>
-              setActiveSection((prev) => {
-                return { ...prev, id: n.id };
-              })
-            }
             selected={
               (isToolbar && activeSectionId && activeSectionId === n.id) ||
               false
