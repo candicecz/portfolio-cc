@@ -36,4 +36,5 @@ export const StyledSVG = styled("svg").attrs((props) => ({
   preserveAspectRatio: "none",
 }))`
   max-height: 100px;
+  transform: ${(props) => props.transform};
 `;

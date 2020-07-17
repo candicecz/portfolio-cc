@@ -59,15 +59,19 @@ const Component = () => {
               </StyledText>
               <StyledText>
                 I'm a software developer with a background in graphic design. I
-                love working in a field that blends creativity and
-                puzzle-solving (as both stimulate my imagination to no end).
+                primarily enjoy working in the front-end creating beautiful,
+                intuitive user interfaces and data visualizations.
               </StyledText>
               <StyledText>
-                I primarily enjoy working in the front-end creating beautiful,
-                intuitive user interfaces and data visualizations. When it comes
-                to design, I'm endlessly inspired by the world around me -
-                whether it be nature, the decor at a restaurant or art from a
-                graphic novel.
+                I find it immensely satisfying to be part of a project from end
+                to end, from conception to completion (with a little challenge
+                along the way to keep things interesting).
+              </StyledText>
+              <StyledText>
+                I love working in a field that blends creativity and
+                puzzle-solving. I approach development with an eye that's
+                inspired by the world around me - whether it be nature, the
+                decor at a restaurant or art from a graphic novel.
               </StyledText>
             </StyledAbout>
           </Box>

@@ -13,14 +13,14 @@ const Component = ({
 }) => {
   return (
     <React.Fragment>
-      {patternTop && <Pattern transform={"scale(-1)"} />}
+      {patternTop && <Pattern transform={"scale(-1,-1)"} />}
       <Box bg={"bg.default"} {...props}>
         <StyledLayout flexDirection={"column"}>
           {sectionTitle && <StyledTitle>{sectionTitle}</StyledTitle>}
           {children}
         </StyledLayout>
       </Box>
-      {patternBottom && <Pattern transform={"scale(1)"} />}
+      {patternBottom && <Pattern transform={"scale(1,1)"} />}
     </React.Fragment>
   );
 };
