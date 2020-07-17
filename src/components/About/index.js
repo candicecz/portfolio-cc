@@ -88,7 +88,7 @@ const Component = () => {
               Technical
             </Text>
             <Text variant="xs" color="text.secondary" textAlign="center">
-              JavaScript, Node.js, React, GraphQL, HTML/CSS, MySQL
+              JavaScript (Node.js, React), GraphQL, HTML/CSS, MySQL
             </Text>
           </StyledSkill>
           <StyledSkill>
@@ -112,7 +112,7 @@ const Component = () => {
               Other
             </Text>
             <Text variant="xs" color="text.secondary" textAlign="center">
-              Web Content, Project Planning, Plant Watering, Guitar Picking,
+              Web Content, Project Planning, Plant Watering, Guitar Strumming,
               Coffee Drinking
             </Text>
           </StyledSkill>
