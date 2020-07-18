@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import PropTypes from "prop-types";
 import Header from "src/components/Header";
@@ -34,11 +34,14 @@ const Component = ({ children }) => {
 
   useEffect(() => {
     const current_hash = history.location.hash;
+
     if (isHeaderInView === false && activeSection.id) {
       if (current_hash.slice(1) !== activeSection.id) {
         history.push(`#${activeSection.id}`);
       }
     }
+
+    // Remove the hash when scrolled to the top of the page.
     if (isHeaderInView === true && activeSection.id) {
       if (current_hash) {
         history.push("");
@@ -50,8 +53,8 @@ const Component = ({ children }) => {
     <React.Fragment>
       <Header
         sections={sections}
-        activeSectionId={activeSection && activeSection.id}
         setIsHeaderInView={(v) => setIsHeaderInView(v)}
+        setActiveSection={(v) => setActiveSection(v)}
       />
       {children({
         sections: sections,

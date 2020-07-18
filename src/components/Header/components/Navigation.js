@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import PropTypes from "prop-types";
 import { StyledNavigationLink, StyledNavigationRow } from "../styles";
 import { Box, Text } from "src/components/shared/";
@@ -24,24 +26,34 @@ const NavigationLink = (props) => {
   );
 };
 
-const Component = ({ sections, activeSectionId, isToolbar, ...rest }) => {
+const Component = ({ sections, setActiveSection, isToolbar, ...rest }) => {
+  const [selected, setSelected] = useState(null);
+  const location = useLocation();
+  useEffect(() => {
+    const location_hash = location.hash;
+    setSelected((prev) => {
+      if (location_hash) {
+        return location_hash.slice(1);
+      }
+      return prev;
+    });
+  }, [location]);
+
   return (
     <StyledNavigationRow flex={1} {...rest}>
-      {sections.map((n) => {
+      {sections.map((s) => {
         return (
           <NavigationLink
-            key={n.id}
-            href={`/#${n.id}`}
+            key={s.id}
+            href={`/#${s.id}`}
             isToolbar={isToolbar}
-            selected={
-              (isToolbar && activeSectionId && activeSectionId === n.id) ||
-              false
-            }
+            selected={isToolbar && selected === s.id}
+            onClick={() => setActiveSection({ ratio: 0, id: s.id })}
             justifyContent={["center", "flex-start"]}
             color={isToolbar ? "text.primary" : "text.reverse"}
-            ariaLabel={`Links to ${n.id} section`}
+            ariaLabel={`Links to ${s.id} section`}
           >
-            {n.title}
+            {s.title}
           </NavigationLink>
         );
       })}
@@ -60,7 +72,6 @@ NavigationLink.propTypes = {
 Component.propTypes = {
   isToolbar: PropTypes.bool,
   sections: PropTypes.array.isRequired,
-  activeSectionId: PropTypes.string,
   setActiveSection: PropTypes.func,
 };
 

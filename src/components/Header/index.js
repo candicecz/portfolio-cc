@@ -12,7 +12,7 @@ import {
   StyledSVG,
 } from "./styles";
 
-const Component = ({ sections, activeSectionId, setIsHeaderInView }) => {
+const Component = ({ sections, setActiveSection, setIsHeaderInView }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isToolbar, setIsToolbar] = useState(false);
   const headerEl = useRef(false);
@@ -61,8 +61,8 @@ const Component = ({ sections, activeSectionId, setIsHeaderInView }) => {
           {sections && (
             <Navigation
               sections={sections}
-              activeSectionId={activeSectionId}
               isToolbar={isToolbar}
+              setActiveSection={(v) => setActiveSection(v)}
             />
           )}
 
@@ -83,9 +83,9 @@ const Component = ({ sections, activeSectionId, setIsHeaderInView }) => {
                 {sections && (
                   <Navigation
                     sections={sections}
-                    activeSectionId={activeSectionId}
                     isToolbar={isToolbar}
                     mx={3}
+                    setActiveSection={(v) => setActiveSection(v)}
                   />
                 )}
               </React.Fragment>
@@ -127,7 +127,7 @@ const Component = ({ sections, activeSectionId, setIsHeaderInView }) => {
 
 Component.propTypes = {
   sections: PropTypes.array,
-  activeSectionId: PropTypes.string,
+  setActiveSection: PropTypes.func,
   setIsHeaderInView: PropTypes.func,
 };
 
