@@ -40,42 +40,40 @@ const Component = () => {
   return (
     <React.Fragment>
       <SectionWrapper sectionTitle={"About"} patternBottom={true}>
-        <Slug delay={300}>
-          <Box flexDirection={["column", "column", "column", "row"]}>
-            <StyledAnimationWrapper>
-              <Box width={"100%"} maxWidth={"22rem"}>
-                {isLoading ? (
-                  <StyledLoader>
-                    <Spinner width={"22rem"} />
-                  </StyledLoader>
-                ) : (
-                  <Box ref={animationEl} width="100%" height="100%" />
-                )}
-              </Box>
-            </StyledAnimationWrapper>
-            <StyledAbout>
-              <StyledText variant={"title-xs"} color={"text.primary"}>
-                Hi, I'm Candice.
-              </StyledText>
-              <StyledText>
-                I'm a software developer with a background in graphic design. I
-                primarily enjoy working in the front-end creating beautiful,
-                intuitive user interfaces and data visualizations.
-              </StyledText>
-              <StyledText>
-                I find it immensely satisfying to be part of a project from end
-                to end, from conception to completion (with a little challenge
-                along the way to keep things interesting).
-              </StyledText>
-              <StyledText>
-                I love working in a field that blends creativity and
-                puzzle-solving. I approach development with an eye that's
-                inspired by the world around me - whether it be nature, the
-                decor at a restaurant or art from a graphic novel.
-              </StyledText>
-            </StyledAbout>
-          </Box>
-        </Slug>
+        <Box flexDirection={["column", "column", "column", "row"]}>
+          <StyledAnimationWrapper>
+            <Box width={"100%"} maxWidth={"22rem"}>
+              {isLoading ? (
+                <StyledLoader>
+                  <Spinner width={"22rem"} />
+                </StyledLoader>
+              ) : (
+                <Box ref={animationEl} width="100%" height="100%" />
+              )}
+            </Box>
+          </StyledAnimationWrapper>
+          <StyledAbout>
+            <StyledText variant={"title-xs"} color={"text.primary"}>
+              Hi, I'm Candice.
+            </StyledText>
+            <StyledText>
+              I'm a software developer with a background in graphic design. I
+              primarily enjoy working in the front-end creating beautiful,
+              intuitive user interfaces and data visualizations.
+            </StyledText>
+            <StyledText>
+              I find it immensely satisfying to be part of a project from end to
+              end, from conception to completion (with a little challenge along
+              the way to keep things interesting).
+            </StyledText>
+            <StyledText>
+              I love working in a field that blends creativity and
+              puzzle-solving. I approach development with an eye that's inspired
+              by the world around me - whether it be nature, the decor at a
+              restaurant or art from a graphic novel.
+            </StyledText>
+          </StyledAbout>
+        </Box>
       </SectionWrapper>
       <SectionWrapper sectionTitle={"Skills"} bg={"none"} my={[4, 4, 7]}>
         <StyledSkills>

@@ -39,6 +39,7 @@ const Component = ({ sections, activeSectionId, isToolbar, ...rest }) => {
             }
             justifyContent={["center", "flex-start"]}
             color={isToolbar ? "text.primary" : "text.reverse"}
+            ariaLabel={`Links to ${n.id} section`}
           >
             {n.title}
           </NavigationLink>

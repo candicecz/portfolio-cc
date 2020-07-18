@@ -34,8 +34,8 @@ const Component = ({
       onClick={onClick}
       {...rest}
     >
-      <InlineSvg ariaLabelledBy={title && "title"}>
-        {title && <title id="title">{title}</title>}
+      <InlineSvg ariaLabelledBy={title || "title"}>
+        {title && <title id={title}>{title}</title>}
         <Glyph glyph={glyph} />
       </InlineSvg>
     </SvgWrapper>
