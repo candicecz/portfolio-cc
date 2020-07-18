@@ -201,6 +201,7 @@ export const StyledAssetWrapper = styled(Box).attrs((props) => ({
   width: ["100%", "100%", "100%", "auto"],
   maxWidth: ["auto", "auto", "auto", "75%"],
   display: "block",
+  cursor: "pointer",
   ...props.styles,
   ...props,
 }))`

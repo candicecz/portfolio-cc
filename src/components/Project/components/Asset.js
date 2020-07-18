@@ -24,7 +24,7 @@ const Component = ({ asset, styles, ...rest }) => {
               ></source>
             )}
             <img
-              style={{ width: "100%" }}
+              style={{ cursor: "pointer", width: "100%", ...main.styles }}
               alt={"Project snapshot."}
               src={require(`src/assets/${main.src}`)}
             />

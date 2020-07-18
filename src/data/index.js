@@ -383,18 +383,27 @@ export const projects_data = [
             main: {
               src: "neurohub/NH_features_discoverable.svg",
               type: "image/svg",
+              styles: {
+                maxHeight: "80vh",
+              },
             },
           },
           {
             main: {
               src: "neurohub/NH_features_readable.svg",
               type: "image/svg",
+              styles: {
+                maxHeight: "80vh",
+              },
             },
           },
           {
             main: {
               src: "neurohub/NH_features_tools.svg",
               type: "image/svg",
+              styles: {
+                maxHeight: "80vh",
+              },
             },
           },
         ],

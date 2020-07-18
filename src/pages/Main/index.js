@@ -48,7 +48,7 @@ const Component = ({ sections, activeSection, setActiveSection }) => {
   }, [sectionEl, observer]);
 
   return (
-    <Box flexDirection={"column"} ref={rootEl}>
+    <Box flexDirection={"column"} ref={rootEl} pb={["5rem", "5rem", "10rem"]}>
       {sections.map(({ id, component }) => {
         return (
           <StyledSection

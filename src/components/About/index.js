@@ -110,8 +110,7 @@ const Component = () => {
               Other
             </Text>
             <Text variant="xs" color="text.secondary" textAlign="center">
-              Web Content, Project Planning, Plant Watering, Guitar Strumming,
-              Coffee Drinking
+              Web Content, Project Planning, Plant Watering, Guitar Strumming
             </Text>
           </StyledSkill>
         </StyledSkills>
