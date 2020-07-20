@@ -20,7 +20,14 @@ const Component = ({
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    setActiveSection({ id: null });
+
+    setActiveSection((prev) => {
+      return {
+        id: null,
+        ratio: 0,
+        ref: null,
+      };
+    });
   }, []);
 
   if (!project && params.id) {
