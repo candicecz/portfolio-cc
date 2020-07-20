@@ -49,10 +49,6 @@ const Component = ({ children }) => {
     }
   }, [isHeaderInView, activeSection, history]);
 
-  useEffect(() => {
-    console.log(activeSection);
-  }, [activeSection]);
-
   return (
     <React.Fragment>
       <Header
