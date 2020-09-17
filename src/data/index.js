@@ -218,8 +218,9 @@ export const projects_data = [
   },
   {
     id: 5,
-    name: "CBRAIN Application",
+    name: "CBRAIN",
     tools: "Node.js, React, Apollo, GraphQL, Styled-Components",
+    youtubeURI: "https://youtu.be/q3tsJgXcHXE",
     categories: [
       "development",
       "design",
@@ -239,6 +240,21 @@ export const projects_data = [
       main: { src: "cbrain-application/thumbnail.png", type: "image/png" },
     },
     sections: [
+      {
+        title: "Sign In / Register",
+        assets: [
+          {
+            fallback: {
+              src: "cbrain-application/login.webm",
+              type: "video/webm",
+            },
+            main: {
+              src: "cbrain-application/login.mp4",
+              type: "video/mp4",
+            },
+          },
+        ],
+      },
       {
         title: "Cards / List View",
         assets: [
@@ -348,6 +364,7 @@ export const projects_data = [
     id: 6,
     name: "NeuroHUB",
     tools: "Ruby on Rails",
+    youtubeURI: "https://youtu.be/GIaNnZJH9dg",
     categories: ["development", "design", "frontend", "UI/UX", "icon design"],
     description:
       "The goal: Build a functional data management application in three months. Built with a team of developers, this app was built in an agile fashion using CBRAIN as its backbone. I handled the front-end side as well as the design (which was based on the NeuroHub website).",

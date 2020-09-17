@@ -43,7 +43,9 @@ const Component = (props) => {
             style={{ zIndex: 1 }}
             p={[0, 2]}
           >
-            {name}
+            {project.name.toLowerCase().includes("cbrain")
+              ? "CBRAIN Application"
+              : name}
           </Text>
           <Text
             variant={["title-xxs", "title-xxs", "title-xs"]}

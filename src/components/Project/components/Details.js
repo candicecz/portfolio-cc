@@ -36,6 +36,27 @@ const Component = ({ delay, project }) => {
                 <Text variant="md" color={"text.secondary"} pr={4} pb={4}>
                   {project.description}
                 </Text>
+                {project.youtubeURI && (
+                  <Text
+                    variant="md"
+                    color={"text.secondary"}
+                    fontWeight={"600"}
+                    pr={4}
+                    pb={4}
+                  >
+                    {project.name} is an application used for scientific
+                    research and limits its user registration to those in the
+                    scientific community. If you wish to view a demo of the
+                    application,{" "}
+                    <a
+                      style={{ textDecoration: "underline", cursor: "pointer" }}
+                      href={project.youtubeURI}
+                      target={"blank"}
+                    >
+                      visit here.
+                    </a>
+                  </Text>
+                )}
                 {project.websiteURI && (
                   <Box flex={1} alignItems={"center"} mt={2} mb={[4, 4, 2]}>
                     <Link
