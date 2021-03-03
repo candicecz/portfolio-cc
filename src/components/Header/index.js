@@ -5,6 +5,7 @@ import useMedia from "src/hooks/useMedia";
 import { Icon } from "src/components/shared";
 import Navigation from "./components/Navigation";
 import Info from "./components/Info";
+import { Link } from "react-router-dom";
 import {
   StyledHeader,
   StyledToolbar,
@@ -72,14 +73,16 @@ const Component = ({ sections, setActiveSection, setIsHeaderInView }) => {
           >
             {isToolbar && (
               <React.Fragment>
-                <Icon
-                  glyph={"cc-logo"}
-                  fill={"bg.default"}
-                  stroke={"bg.primary"}
-                  size={2}
-                  mx={3}
-                  zIndex={1000}
-                />
+                <Link title="homepage" to="/">
+                  <Icon
+                    glyph={"cc-logo"}
+                    fill={"bg.default"}
+                    stroke={"bg.primary"}
+                    size={2}
+                    mx={3}
+                    zIndex={1000}
+                  />
+                </Link>
                 {sections && (
                   <Navigation
                     sections={sections}

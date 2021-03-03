@@ -21,7 +21,7 @@ const Component = () => {
   const ordered_data = R.reverse(projects_data);
 
   return (
-    <SectionWrapper sectionTitle={"Projects"} patternTop={true}>
+    <SectionWrapper sectionTitle={"Projects"} patternTop={true} pt={7}>
       <Slug delay={300}>
         <Box flexWrap={"wrap"} p={[0, 0, 1, 4]}>
           {ordered_data.map((project, i) => {

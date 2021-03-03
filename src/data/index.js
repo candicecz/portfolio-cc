@@ -477,4 +477,89 @@ export const projects_data = [
     ],
     bg: "#00A1A0",
   },
+  {
+    id: 7,
+    name: "Mood Garden",
+    tools: "Python, Javascript",
+    categories: [
+      "development",
+      "build",
+      "frontend",
+      "visualization",
+      "electronics build",
+    ],
+    description:
+      "My first electronics build! I created this mood tracker / light clock as a Christmas gift. I built this using a Feather microcontroller, 12-key capacitative touch sensor and RTC clock module and way too many origami flowers. The colors of the lights change based on the day and hour and also include a pomodoro clock for an added productivity feature (activated by tapping a sensor). The mood tracker portion works by touching the different coloured origami triangles whereby the user can rank their state from 1 to 5. This data is registered and is used to create a simple data visualization (view by clicking button below). This was a super fun project with many firsts for me.",
+    thumbnail: {
+      fallback: { src: "mood-garden/thumbnail.webp", type: "image/webp" },
+      main: { src: "mood-garden/thumbnail.png", type: "image/png" },
+    },
+    sections: [
+      {
+        title: "Mood Garden",
+        assets: [
+          {
+            fallback: { src: "mood-garden/lit_001.webp", type: "image/webp" },
+            main: {
+              src: "mood-garden/lit_001.png",
+              type: "image/png",
+            },
+          },
+        ],
+      },
+      {
+        title: "Circuit",
+        assets: [
+          {
+            fallback: {
+              src: "mood-garden/microcontroller.webp",
+              type: "image/webp",
+            },
+            main: {
+              src: "mood-garden/microcontroller.png",
+              type: "image/png",
+            },
+          },
+        ],
+      },
+      {
+        title: "Origami Triangles",
+        assets: [
+          {
+            fallback: { src: "mood-garden/triangles.webp", type: "image/webp" },
+            main: {
+              src: "mood-garden/triangles.png",
+              type: "image/png",
+            },
+          },
+        ],
+      },
+      {
+        title: "Origami Flowers",
+        assets: [
+          {
+            fallback: { src: "mood-garden/flowers.webp", type: "image/webp" },
+            main: {
+              src: "mood-garden/flowers.png",
+              type: "image/png",
+            },
+          },
+        ],
+      },
+      {
+        title: "Final Product",
+        assets: [
+          {
+            fallback: { src: "mood-garden/final.webp", type: "image/webp" },
+            main: {
+              src: "mood-garden/final.png",
+              type: "image/png",
+            },
+          },
+        ],
+      },
+    ],
+    websiteURI: "https://observablehq.com/@candicecz/mood-garden-collection",
+    bg: "#1a0652",
+  },
 ];

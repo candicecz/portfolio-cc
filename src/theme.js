@@ -87,7 +87,7 @@ export const theme = {
 
   text: {
     "title-xxs": {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 800,
       textTransform: "uppercase",
       fontSize: "0.75rem",
@@ -95,7 +95,7 @@ export const theme = {
       letterSpacing: "0.15rem",
     },
     "title-xs": {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 800,
       textTransform: "uppercase",
       fontSize: "0.875rem",
@@ -103,7 +103,7 @@ export const theme = {
       letterSpacing: "0.15rem",
     },
     "title-sm": {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 800,
       textTransform: "uppercase",
       fontSize: "1rem",
@@ -111,7 +111,7 @@ export const theme = {
       letterSpacing: "0.2rem",
     },
     "title-md": {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 800,
       textTransform: "uppercase",
       fontSize: "1.25rem",
@@ -119,46 +119,46 @@ export const theme = {
       letterSpacing: "0.09rem",
     },
     "title-lg": {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 800,
       textTransform: "uppercase",
       fontSize: "1.5rem",
       lineHeight: "1.5rem",
     },
     "title-xl": {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 800,
       textTransform: "uppercase",
       lineHeight: "1.5rem",
       fontSize: "2rem",
     },
     xs: {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 400,
       fontSize: "0.75rem",
       lineHeight: "1.25rem",
     },
     sm: {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 400,
       fontSize: "0.875rem",
       lineHeight: "1.5rem",
     },
     md: {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 400,
       fontSize: "1rem",
       lineHeight: "1.5rem",
       letterSpacing: "0.02em",
     },
     lg: {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 400,
       fontSize: "1.25rem",
       lineHeight: "1.5rem",
     },
     xl: {
-      fontFamily: "system-ui, sans-serif",
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       fontWeight: 400,
       fontSize: "1.5rem",
       lineHeight: "1.5rem",

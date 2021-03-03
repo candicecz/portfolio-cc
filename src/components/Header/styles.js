@@ -59,7 +59,7 @@ export const StyledWrapper = styled(Box).attrs((props) => ({
 
 export const StyledToolbar = styled(Box).attrs((props) => ({
   width: "100%",
-  height: props.isToolbar ? "3rem" : ["2rem", "3rem", "4rem", "6rem"],
+  height: props.isToolbar ? "3.5rem" : ["2rem", "3rem", "4rem", "6rem"],
   position: "absolute",
   left: 0,
   bottom: 0,
@@ -70,7 +70,6 @@ export const StyledToolbar = styled(Box).attrs((props) => ({
   ${space}
   animation: animateWaveOut 500ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
   transform-origin: bottom;
-
 
   ${(props) =>
     props.isToolbar &&
@@ -96,8 +95,8 @@ export const StyledSVG = styled("svg").attrs((props) => ({
   width: "100%",
   preserveAspectRatio: "none",
 }))`
-${layout}
-${position}
+  ${layout}
+  ${position}
 ${space}
   @keyframes animateWaveIn {
     0% {
@@ -132,7 +131,6 @@ ${space}
         opacity: 1;
       }
     `}
-
 `;
 
 /*
@@ -144,6 +142,7 @@ ${space}
 export const StyledNavigationRow = styled(StyledRow).attrs((props) => ({
   flexWrap: "wrap",
   justifyContent: ["space-evenly", "center", "center", "flex-end"],
+  mx: 4,
 }))`
   ${(props) =>
     props.isToolbar &&

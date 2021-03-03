@@ -39,7 +39,7 @@ const Component = () => {
 
   return (
     <React.Fragment>
-      <SectionWrapper sectionTitle={"About"} patternBottom={true}>
+      <SectionWrapper sectionTitle={"About"} patternBottom={true} pt={7}>
         <Box flexDirection={["column", "column", "column", "row"]}>
           <StyledAnimationWrapper>
             <Box width={"100%"} maxWidth={"22rem"}>
