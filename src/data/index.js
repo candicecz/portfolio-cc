@@ -559,7 +559,7 @@ export const projects_data = [
         ],
       },
     ],
-    websiteURI: "https://observablehq.com/@candicecz/mood-garden-collection",
+    websiteURI: "https://observablehq.com/@candicecz/mood-garden-build?collection=@candicecz/clock-light-mood-tracker",
     bg: "#1a0652",
   },
 ];
