@@ -1,3 +1,3 @@
 # portfolio-cc
 
-Describe portfolio-cc here.
+To view my portfolio, click [here](https://www.candiceczech.com/).
